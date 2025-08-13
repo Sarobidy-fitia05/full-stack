@@ -1,21 +1,14 @@
-import iconPlus from '../../public/images/plus.png'
-
 
 const Form = () => {
-    return <section className="w-full flex justify-center">
-        <div className="flex flex-col justify-center items-center bg-blue-300 p-3 w-[350px]  rounded">
-            <h3 className="text-white text-3xl font-bold">Add chracters</h3>
-            <hr className='text-white w-16'/>
-            <form action="" className="flex flex-col">
-                <input type="text" placeholder="Enter your nickname" />
-                <input type="text" placeholder="Enter your Realname" />
-                <input type="text" placeholder="Enter your Universe" />
-                <button className='bg-blue-600'>
-                    <img src={iconPlus} alt="" />
-                </button>
-            </form>
+    return (
+        <div className="border p-4 bg-gray-100 rounded">
+            <h2 className="text-lg font-bold">Mon Formulaire</h2>
+            <input type="text" placeholder="Nom" className="border p-2 block mb-2" />
+            <button className="bg-blue-500 text-white px-4 py-1 rounded">
+                Enregistrer
+            </button>
         </div>
-    </section>
+    );
 }
 
 export default Form;
