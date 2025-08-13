@@ -3,13 +3,18 @@ import express from 'express';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+import cors from 'cors';
 // Pour gérer les chemins en ES Module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3001;
+
+
+app.use(cors());
+
+
 
 // Route pour lire le JSON
 app.get('/api/characters', (req, res) => {
